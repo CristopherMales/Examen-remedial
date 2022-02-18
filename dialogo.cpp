@@ -20,6 +20,23 @@ Tarea* Dialogo::obtener_valores()
     QChar prioridad = ui->linePrioridad->text().at(0);
     QString tipo= ui->lineTipo->text();
     Tarea *d = new Tarea();
+    if(nombre.isEmpty() || nombre.isNull() ){
+        QMessageBox::warning(this,"Campos Requerido",
+                                     "Ingrese datos por favor");
+        return nullptr;
+    }
+    if(nombre.length()>=80){
+        QMessageBox::warning(this,
+                                     "Datos Incorrectos",
+                                     "Tamaño de Nombre maximo 80");
+        return nullptr;
+    }
+    if(prioridad.toLower() != "a" && prioridad.toLower() != "m" && prioridad.toLower() != "b"){
+        QMessageBox::warning(this,
+                                     "Datos Incorrectos",
+                                     "No es una prioridad valida");
+        return nullptr;
+    }
     d->setNombre(nombre);
     d->setFecha(fecha);
     d->setPrioridad(prioridad);

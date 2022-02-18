@@ -21,6 +21,7 @@ public:
 
 private slots:
     void abrir_dialogo();
+    void on_finalizada_tabla(int row,int column);
 
 private:
     Ui::Principal *ui;
