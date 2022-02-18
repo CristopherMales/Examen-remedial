@@ -17,7 +17,7 @@ Tarea* Dialogo::obtener_valores()
 {
     QString nombre = ui->lineNombre->text();
     QDate fecha = ui->lineFecha->date();
-    QChar prioridad = ui->linePrioridad->text().at(0);
+    QChar prioridad = ui->linePrioridad->text().at(0).toLower();
     QString tipo= ui->lineTipo->text();
     Tarea *d = new Tarea();
     if(nombre.length() == 0 || fecha.isNull()  || prioridad.isNull() || tipo.length() == 0 ){
@@ -31,7 +31,7 @@ Tarea* Dialogo::obtener_valores()
                                      tr("Tamaño de Nombre maximo 80"));
         return nullptr;
     }
-    if(prioridad.toLower() != "a" && prioridad.toLower() != "m" && prioridad.toLower() != "b"){
+    if(prioridad != "a" && prioridad != "m" && prioridad != "b"){
         QMessageBox::warning(this,
                                      tr("Datos Incorrectos"),
                                      tr("No es una prioridad valida"));
