@@ -32,12 +32,13 @@ void Principal::on_finalizada_tabla(int row, int column){
     QMessageBox::StandardButton respuesta = QMessageBox::question(
             this,
             tr("Cambio a finalizado"),
-            tr("¿Quieres cambiar esta tarea a finalizado?"),
+            tr("¿Quieres cambiar esta tarea a finalizado?") ,
             QMessageBox::Yes | QMessageBox::No
         );
 
         if(respuesta == QMessageBox::Yes){
-            c->lista_tareas.at(row)->setFinalizada(true);
+            int index = ui->tabla->item(row,0)->text().toInt()-1;
+            c->lista_tareas.at(index)->setFinalizada(true);
             ui->tabla->setRowCount(0);
             c->vaciarArchivo();
             c->escribirDatos();
