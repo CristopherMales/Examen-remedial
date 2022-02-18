@@ -10,8 +10,6 @@ public:
      explicit controlador(QObject *parent = nullptr);
     //Tarea *tarea() const;
     bool btnAgregar(Tarea *t1);
-
-private:
     QList<Tarea*> lista_tareas;
 
 };

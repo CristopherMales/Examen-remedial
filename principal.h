@@ -17,11 +17,13 @@ class Principal : public QMainWindow
 public:
     Principal(QWidget *parent = nullptr);
     ~Principal();
+    controlador *c;
 
 private slots:
     void abrir_dialogo();
 
 private:
     Ui::Principal *ui;
+    void llenarTabla();
 };
 #endif // PRINCIPAL_H

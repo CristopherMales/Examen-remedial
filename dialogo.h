@@ -16,7 +16,7 @@ class Dialogo : public QDialog
 public:
     explicit Dialogo(QWidget *parent = nullptr);
     ~Dialogo();
-    Tarea obtener_valores();
+    Tarea* obtener_valores();
 
 private:
     Ui::Dialogo *ui;
