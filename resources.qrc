@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>carpeta.png</file>
+        <file>boton.png</file>
+        <file>copiar.png</file>
+        <file>pegar.png</file>
+        <file>acerca-de.png</file>
+    </qresource>
+</RCC>

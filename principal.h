@@ -23,6 +23,9 @@ private slots:
     void abrir_dialogo();
     void on_finalizada_tabla(int row,int column);
 
+
+    void on_actionSalir_2_triggered();
+
 private:
     Ui::Principal *ui;
     void llenarTabla();

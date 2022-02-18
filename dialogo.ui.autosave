@@ -28,7 +28,7 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Nombre</string>
+           <string>Nombre:</string>
           </property>
          </widget>
         </item>
@@ -42,12 +42,19 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Fecha</string>
+           <string>Fecha:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QDateEdit" name="lineFecha"/>
+         <widget class="QDateEdit" name="lineFecha">
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
         </item>
         <item>
          <spacer name="horizontalSpacer">
@@ -72,7 +79,7 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Prioridad</string>
+           <string>Prioridad:</string>
           </property>
          </widget>
         </item>
@@ -86,7 +93,7 @@
         <item>
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>Tipo</string>
+           <string>Tipo:</string>
           </property>
          </widget>
         </item>
