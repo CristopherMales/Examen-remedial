@@ -51,7 +51,7 @@ Tarea::Tarea(QObject *parent) : QObject(parent)
     dato_numero = -1;
     dato_nombre = "";
     dato_fecha = QDate::currentDate();
-    dato_prioridad = '';
+    dato_prioridad = ' ';
     dato_tipo = "";
     dato_finalizada = false;
 }

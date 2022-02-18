@@ -2,6 +2,9 @@
 #define PRINCIPAL_H
 
 #include <QMainWindow>
+#include <QDebug>
+#include "dialogo.h"
+#include "tarea.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Principal; }
@@ -16,7 +19,7 @@ public:
     ~Principal();
 
 private slots:
-    void on_pushButton_clicked();
+    void abrir_dialogo();
 
 private:
     Ui::Principal *ui;

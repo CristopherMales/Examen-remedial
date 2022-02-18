@@ -7,15 +7,13 @@ Principal::Principal(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->btnAgregar, SIGNAL(clicked()),this,SLOT(abrir_dialogo()));
+    QStringList cabecera = {"Numero","Nombre","Tipo","Fecha"};
+    ui->tabla->setColumnCount(4);
+    ui->tabla->setHorizontalHeaderLabels(cabecera);
 }
-void abrir_dialogo(){
-    dialogo *dialg = new  dialg(this);
-
-       dialg->setVersion(VERSION);
-       // Mostrar la ventana (diálogo) MODAL
+void Principal::abrir_dialogo(){
+    Dialogo *dialg = new Dialogo(this);
        dialg->exec();
-       // Obtener datos de la ventana
-       qDebug() << dialg->obtener_valores();
 }
 
 Principal::~Principal()

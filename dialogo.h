@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "tarea.h"
+#include "controlador.h"
 
 namespace Ui {
 class Dialogo;

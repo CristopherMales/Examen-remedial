@@ -13,12 +13,17 @@ Dialogo::~Dialogo()
     delete ui;
 }
 
-Tarea Dialogo::obtener_valores():
+Tarea Dialogo::obtener_valores()
 {
+    QString nombre = ui->lineNombre->text();
+    QDate fecha = QDate::fromString(ui->lineFecha->text());
+    QChar prioridad = ui->linePrioridad->text().at(0);
+    QString tipo= ui->lineTipo->text();
     Tarea *d = new Tarea();
-    d->setNombre(ui->lineNombre);
-    d->setFecha(ui->lineFecha);
-    d->setPrioridad(ui->linePrioridad);
-    d->setTipo(ui->lineTipo);
-    return d;
+    d->setNombre(nombre);
+    d->setFecha(fecha);
+    d->setPrioridad(prioridad);
+    d->setTipo(tipo);
+    controlador *c = new controlador();
+    c->btnAgregar(d);
 }
